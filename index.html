@@ -149,35 +149,37 @@
       </div>
     </section>
 
-    <section id="portafolio" class="portfolio">
+   <section id="portafolio" class="portfolio">
   <h2 style="margin:6px 0 12px;color:#00bcd4">Portafolio</h2>
   <div class="grid">
+
     <!-- Card 1 -->
-    <div class="card" style="background-image:url('contenido/img1.png');">
-      <div class="overlay">
-        <div class="thumb">Mockup - PetCare</div>
-        <div style="margin-top:10px;font-weight:700;color:#e0f7fa">Rediseño de logotipo</div>
-        <div style="font-size:13px;color:var(--muted)">Identidad para tienda boutique de mascotas.</div>
+    <div class="card">
+      <div class="thumb" style="background-image:url('contenido/img1.png');">
+        Mockup - PetCare
       </div>
+      <div style="margin-top:10px;font-weight:700;color:#e0f7fa">Rediseño de logotipo</div>
+      <div style="font-size:13px;color:var(--muted)">Identidad para tienda boutique de mascotas.</div>
     </div>
 
     <!-- Card 2 -->
-    <div class="card" style="background-image:url('contenido/img2.png');">
-      <div class="overlay">
-        <div class="thumb">Packaging - SnackDog</div>
-        <div style="margin-top:10px;font-weight:700;color:#e0f7fa">Etiqueta para snacks</div>
-        <div style="font-size:13px;color:var(--muted)">Diseño pensado en visibilidad y normas de empaque.</div>
+    <div class="card">
+      <div class="thumb" style="background-image:url('contenido/img2.png');">
+        Packaging - SnackDog
       </div>
+      <div style="margin-top:10px;font-weight:700;color:#e0f7fa">Etiqueta para snacks</div>
+      <div style="font-size:13px;color:var(--muted)">Diseño pensado en visibilidad y normas de empaque.</div>
     </div>
 
     <!-- Card 3 -->
-    <div class="card" style="background-image:url('contenido/img3.png');">
-      <div class="overlay">
-        <div class="thumb">Web - GroomKing</div>
-        <div style="margin-top:10px;font-weight:700;color:#e0f7fa">Landing para peluquería</div>
-        <div style="font-size:13px;color:var(--muted)">Reservas online y galería de estilos.</div>
+    <div class="card">
+      <div class="thumb" style="background-image:url('contenido/img3.png');">
+        Web - GroomKing
       </div>
+      <div style="margin-top:10px;font-weight:700;color:#e0f7fa">Landing para peluquería</div>
+      <div style="font-size:13px;color:var(--muted)">Reservas online y galería de estilos.</div>
     </div>
+
   </div>
 </section>
 
@@ -189,50 +191,55 @@
   }
 
   .card {
-    position: relative;
-    height: 230px;
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    box-shadow: 0 0 12px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 18px rgba(0, 188, 212, 0.7);
-  }
-
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     padding: 15px;
-    background: rgba(0, 0, 0, 0.6);
-    color: #e0f7fa;
     text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
   }
 
   .thumb {
-    font-size: 15px;
+    height: 140px;
+    border-radius: 10px;
+    color: #fff;
     font-weight: bold;
-    color: #00bcd4;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
 
-  /* 🔹 Responsive */
+  /* Efecto de oscurecimiento en la imagen */
+  .thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease;
+  }
+
+  .thumb:hover::after {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .thumb:hover {
+    transform: scale(1.02);
+  }
+
   @media (max-width: 600px) {
-    .card {
-      height: 180px;
-    }
-    .overlay {
-      padding: 10px;
-    }
     .thumb {
-      font-size: 13px;
+      height: 120px;
+      font-size: 14px;
     }
   }
 </style>
+
 
     <section id="contacto" class="contact">
       <div>
@@ -293,6 +300,7 @@
   </script>
 </body>
 </html>
+
 
 
 
