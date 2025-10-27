@@ -150,25 +150,89 @@
     </section>
 
     <section id="portafolio" class="portfolio">
-      <h2 style="margin:6px 0 12px;color:#00bcd4">Portafolio</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="thumb">Mockup - PetCare</div>
-          <div style="margin-top:10px;font-weight:700;color:#e0f7fa">Rediseño de logotipo</div>
-          <div style="font-size:13px;color:var(--muted)">Identidad para tienda boutique de mascotas.</div>
-        </div>
-        <div class="card">
-          <div class="thumb">Packaging - SnackDog</div>
-          <div style="margin-top:10px;font-weight:700;color:#e0f7fa">Etiqueta para snacks</div>
-          <div style="font-size:13px;color:var(--muted)">Diseño pensado en visibilidad y normas de empaque.</div>
-        </div>
-        <div class="card">
-          <div class="thumb">Web - GroomKing</div>
-          <div style="margin-top:10px;font-weight:700;color:#e0f7fa">Landing para peluquería</div>
-          <div style="font-size:13px;color:var(--muted)">Reservas online y galería de estilos.</div>
-        </div>
+  <h2 style="margin:6px 0 12px;color:#00bcd4">Portafolio</h2>
+  <div class="grid">
+    <!-- Card 1 -->
+    <div class="card" style="background-image:url('contenido/img1.png');">
+      <div class="overlay">
+        <div class="thumb">Mockup - PetCare</div>
+        <div style="margin-top:10px;font-weight:700;color:#e0f7fa">Rediseño de logotipo</div>
+        <div style="font-size:13px;color:var(--muted)">Identidad para tienda boutique de mascotas.</div>
       </div>
-    </section>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" style="background-image:url('contenido/img2.png');">
+      <div class="overlay">
+        <div class="thumb">Packaging - SnackDog</div>
+        <div style="margin-top:10px;font-weight:700;color:#e0f7fa">Etiqueta para snacks</div>
+        <div style="font-size:13px;color:var(--muted)">Diseño pensado en visibilidad y normas de empaque.</div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" style="background-image:url('contenido/img3.png');">
+      <div class="overlay">
+        <div class="thumb">Web - GroomKing</div>
+        <div style="margin-top:10px;font-weight:700;color:#e0f7fa">Landing para peluquería</div>
+        <div style="font-size:13px;color:var(--muted)">Reservas online y galería de estilos.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    position: relative;
+    height: 230px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 18px rgba(0, 188, 212, 0.7);
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #e0f7fa;
+    text-align: center;
+  }
+
+  .thumb {
+    font-size: 15px;
+    font-weight: bold;
+    color: #00bcd4;
+  }
+
+  /* 🔹 Responsive */
+  @media (max-width: 600px) {
+    .card {
+      height: 180px;
+    }
+    .overlay {
+      padding: 10px;
+    }
+    .thumb {
+      font-size: 13px;
+    }
+  }
+</style>
 
     <section id="contacto" class="contact">
       <div>
@@ -178,7 +242,7 @@
         <div style="display:flex;gap:12px;margin-top:14px">
           <div style="background:var(--card);padding:12px;border-radius:12px;flex:1;box-shadow:0 6px 18px rgba(0,0,0,0.3)">
             <div style="font-weight:700;color:#e0f7fa">📞 Teléfono</div>
-            <div style="color:var(--muted)">+57 300 000 0000</div>
+            <div style="color:var(--muted)">+57 3208198458</div>
           </div>
           <div style="background:var(--card);padding:12px;border-radius:12px;flex:1;box-shadow:0 6px 18px rgba(0,0,0,0.3)">
             <div style="font-weight:700;color:#e0f7fa">✉️ Email</div>
@@ -229,5 +293,6 @@
   </script>
 </body>
 </html>
+
 
 
